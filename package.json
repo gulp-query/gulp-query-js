@@ -1,7 +1,7 @@
 {
     "name": "gulp-query-js",
     "version": "1.0.0",
-    "description": "Gulp-query plugin for JS",
+    "description": "This plugin provides automatic source maps, concatenation, minification and compiling with Babel.",
     "main": "index.js",
     "author": "Marat Nuriev",
     "email": "nurieff@gmail.com",

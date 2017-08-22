@@ -5,6 +5,8 @@ Uses [babel](http://babeljs.io/) and [uglify](https://www.npmjs.com/package/gulp
 
 This plugin provides automatic source maps, concatenation, minification and compiling with Babel.
 
+P.S. Try [gulp-query-js-buble](https://github.com/gulp-query/gulp-query-js-buble) with the blazing fast, batteries-included ES2015 compiler
+
 ```
 npm install gulp-query gulp-query-js
 ```
@@ -45,17 +47,17 @@ And feel the freedom
 ```
 gulp
 gulp --production // For production (minification)
-gulp watch // Wathing change
+gulp watch // Watching change
 gulp js // Only for js
 gulp js:app // Only for app.js
-gulp js:admin js:main watch // Wathcing change only for admin.js and main.js
+gulp js:admin js:main watch // Watching change only for admin.js and main.js
 ...
 ```
 
 ### Options
 ```javascript
 .js({
-    name: "new_name", // For gulp js:new_name 
+    name: "task_name", // For gulp js:task_name 
     from: "src/js/app.js", // ["src/js/f1.js", "src/js/f2.js"]
     to: "js/", // set filename "js/concat.js" -- for concat or rename
     source_map: true,
