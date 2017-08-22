@@ -2,6 +2,9 @@
 JS plugin for [gulp-query](https://github.com/gulp-query/gulp-query)
 
 Uses [babel](http://babeljs.io/) and [uglify](https://www.npmjs.com/package/gulp-uglify)
+
+This plugin provides automatic source maps, concatenation, minification and compiling with Babel.
+
 ```
 npm install gulp-query gulp-query-js
 ```
@@ -12,11 +15,11 @@ Paste the code into your `gulpfile.js` and configure it
 let build = require('gulp-query')
   , js = require('gulp-query-js')
 ;
-cocktail(function (query) {
+build((query) => {
     query.plugins([js])
       .js('src/js/app.js','js/','app')
     
-      // Rename and own babel config
+      // uses own babel config and creates with new name
       .js('src/js/admin.js','js/undercover.js',{
         babel: {
           presets: ['env']
@@ -33,7 +36,7 @@ cocktail(function (query) {
       // Multiple files
       .js(['src/js/app.js','src/js/main.js'],'js/')
       
-      // Multiple files and concat
+      // Multiple files and combine
       .js(['src/js/app.js','src/js/main.js'],'js/concat.js')
     ;
 });
@@ -41,7 +44,7 @@ cocktail(function (query) {
 And feel the freedom
 ```
 gulp
-gulp --production // For production
+gulp --production // For production (minification)
 gulp watch // Wathing change
 gulp js // Only for js
 gulp js:app // Only for app.js
