@@ -36,7 +36,7 @@ class JsPlugin extends Plugin {
     let path_to = this.path(config.to);
     let parent_folder = 'parent_folder' in config ? config.parent_folder : null;
     let babelrc = {
-      presets: ['babel-preset-env'].map(require.resolve)
+      presets: ['@babel/preset-env'].map(require.resolve)
     };
 
     if ('babel' in config) {
