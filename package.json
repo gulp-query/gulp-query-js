@@ -1,6 +1,6 @@
 {
     "name": "gulp-query-js",
-    "version": "1.1.0",
+    "version": "1.1.1",
     "description": "This plugin provides automatic source maps, concatenation, minification and compiling with Babel.",
     "main": "index.js",
     "author": "Marat Nuriev",
@@ -19,6 +19,7 @@
     "dependencies": {
         "@babel/core": "^7.2.2",
         "@babel/preset-env": "^7.2.3",
+        "gulp": "^4.0.0",
         "gulp-babel": "^8.0.0",
         "gulp-concat": "^2.6.1",
         "gulp-if": "^2.0.2",
